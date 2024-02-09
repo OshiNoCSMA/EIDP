@@ -12,34 +12,6 @@ def neg_sample(seq_item, itemset):
         neg_item = itemset[neg_item_idx]
     return neg_item
 
-def neg_set_generate(seq_bs, inverse=True):
-    bt = len(seq_bs)
-    max_strength = 2 ** bt - 1
-    fluc_range = np.ceil(np.log(max_strength))
-
-    if inverse:
-        seq_bs = [str(b) for b in seq_bs[::-1]]
-    else:
-        seq_bs = [str(b) for b in seq_bs]
-
-    bin_bs = ''.join(seq_bs)
-    preference_strength = int(bin_bs, 2)
-
-    fluc = random.randint(1, fluc_range)
-    if preference_strength < fluc_range:
-        preference_strength += fluc
-    elif preference_strength > max_strength - fluc_range:
-        preference_strength -= fluc
-    else:
-        p_or_m = 1 if random.random() < 0.5 else -1
-        preference_strength += p_or_m * fluc
-
-    neg_bs = bin(preference_strength)[2:]
-    neg_bs = '0' * (bt - len(neg_bs)) + neg_bs
-    neg_bs = [int(bit) for bit in neg_bs][::-1]
-
-    return neg_bs
-
 class BehaviorSetSequentialRecDataset(Dataset):
     def __init__(self, config, data, data_type="train"):
         self.config = config
@@ -125,8 +97,3 @@ class BehaviorSetSequentialRecDataset(Dataset):
 
     def __len__(self):
         return len(self.train_data)
-
-if __name__ == '__main__':
-    bs = [1, 0, 0, 0] # [0, 1, 1, 1]
-    print('origin bs:', bs)
-    print('generated neg bs:', neg_set_generate(bs))

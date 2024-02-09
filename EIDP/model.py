@@ -252,7 +252,7 @@ class EIDP(BasicModel):
         # (b, L) --> (b, 1, 1, L)
         padding_mask = padding_mask.unsqueeze(1).unsqueeze(2)
         attn_mask_shape = (1, self.maxlen, self.maxlen)  # (1, L, L)
-        # 上三角 torch.uint8
+        # Upper triangular, torch.uint8
         attn_mask = torch.triu(torch.ones(attn_mask_shape), diagonal=1)
         # --> bool
         attn_mask = (attn_mask == 0).unsqueeze(1)

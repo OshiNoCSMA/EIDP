@@ -190,7 +190,8 @@ def data_partition(dataset_name):
                 behavior_set = [int(b) for b in line.rstrip().split(',')[2:]]
                 bt = determine_behavior_type(behavior_set)
 
-                # 这里我们忽略掉全为0的set(真实的负反馈)
+                # Here, we ignore sets that are entirely composed of zeros
+                # (real negative feedback).
                 if bt != 0:
                     userset.add(u)
                     itemset.add(i)
