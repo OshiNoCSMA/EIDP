@@ -11,7 +11,7 @@ torchvision==0.14.1
 CUDA 11.7
 * * *
 ## Command
-Our implementation code has some references from the source codes of ([ICLRec](https://github.com/salesforce/ICLRec)) and ([RecBole]([https://github.com/RUCAIBox/RecBole])).
+Our implementation code has some references from the source codes of ([ICLRec](https://github.com/salesforce/ICLRec)) and ([RecBole](https://github.com/RUCAIBox/RecBole)).
 
 For QK-Video, the execution command is,
 
