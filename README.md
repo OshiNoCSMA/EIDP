@@ -3,8 +3,11 @@ Explicit and Implicit Modeling via Dual-Path Transformer for Behavior Set-inform
 * * *
 ## Requirement
 python==3.7.1
+
 pytorch==1.13.1
+
 torchvision==0.14.1
+
 CUDA 11.7
 * * *
 ## Command
