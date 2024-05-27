@@ -10,7 +10,7 @@ This is our official implementation for the paper **Explicit and Implicit Modeli
 ![](EIDP.png)
 * * *
 
-## Requirement
+## Requirements
 python==3.7.1
 
 pytorch==1.13.1
@@ -20,8 +20,11 @@ torchvision==0.14.1
 CUDA 11.7
 * * *
 
-## Command
-Our implementation code has some references from the source codes of ([ICLRec](https://github.com/salesforce/ICLRec)) and ([RecBole](https://github.com/RUCAIBox/RecBole)).
+## Dataset
+We use the dataset provided in **Tenrec: A Large-scale Multipurpose Benchmark Dataset for Recommender Systems**, sourced from the Tencent platform. For more information about the original data, please refer to [here](https://github.com/yuangh-x/2022-NIPS-Tenrec).
+
+## Commands
+Our implementation code is tested on Tesla V100 PCIE GPU Platform with 32 GB memory and has some references from the source codes of [ICLRec](https://github.com/salesforce/ICLRec) and [RecBole](https://github.com/RUCAIBox/RecBole).
 
 For QK-Video, the execution command is,
 ```bash
@@ -43,6 +46,8 @@ python main.py --dataset=[...] --do_eval
 [A.1 Notation Table](A1NotationTable.pdf)
 
 [A.2 ProbSparse multi-head self-attention mechanism](A2Algo_PSA.pdf)
+
+[Main experimental results without loss function constraints](EIDP_onCE.pdf) (i.e., [DuoRec](https://github.com/RuihongQiu/DuoRec), [MGNN-SPred](https://github.com/Autumn945/MGNN-SPred) and [MBHT](https://github.com/yuh-yang/MBHT-KDD22) are all trained using the CE loss function, consistent with the original source code. Accordingly, EIDP also needs to maintain this consistency.) From this, it can be seen that training with the CE loss function leads to improvements in general models.
 * * *
 
 If you have any issues or ideas, feel free to contact us ([2252271001@email.szu.edu.cn](mailto:2252271001@email.szu.edu.cn); [CNWorldisyourFC@gmail.com](mailto:CNWorldisyourFC@gmail.com)).
