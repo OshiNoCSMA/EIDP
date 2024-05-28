@@ -21,7 +21,7 @@ CUDA 11.7
 * * *
 
 ## Dataset
-We use the dataset provided in **Tenrec: A Large-scale Multipurpose Benchmark Dataset for Recommender Systems**, sourced from the Tencent platform. For more information about the original data, please refer to [here](https://github.com/yuangh-x/2022-NIPS-Tenrec).
+We use the dataset provided in **Tenrec: A Large-scale Multipurpose Benchmark Dataset for Recommender Systems (NeurIPS'22)**, sourced from the Tencent platform. For more information about the original data, please refer to [here](https://github.com/yuangh-x/2022-NIPS-Tenrec).
 
 ## Commands
 Our implementation code is tested on Tesla V100 PCIE GPU Platform with 32 GB memory and has some references from the source codes of [ICLRec](https://github.com/salesforce/ICLRec) and [RecBole](https://github.com/RUCAIBox/RecBole).
