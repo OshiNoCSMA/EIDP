@@ -56,4 +56,4 @@ A fomulation of **CE** loss function:
 where $v^\ell_u$ denotes the ground truth item and the indicator function $\delta(v^\ell_u)=0$ when $v^\ell_u$ is a padding item and $\delta(v^\ell_u)=1$ otherwise. Note that $|\delta(v)|$ represents the total amount of ground truth items.
 * * *
 
-If you have any issues or ideas, feel free to contact us ([2252271001@email.szu.edu.cn](mailto:2252271001@email.szu.edu.cn); [CNWorldisyourFC@gmail.com](mailto:CNWorldisyourFC@gmail.com)).
+If you have any issues or ideas, feel free to contact us ([2252271001@email.szu.edu.cn](mailto:2252271001@email.szu.edu.cn)).
