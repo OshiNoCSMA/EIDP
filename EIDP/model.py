@@ -256,6 +256,7 @@ class EIDP(BasicModel):
         b: batch size;
         L: maxlen of seq;
         bt: behavior types num
+        
         :param u: (b,)
         :param input_seqs: (b, L)
         :param bs_seqs: (b, L, bt)
@@ -291,6 +292,7 @@ class EIDP(BasicModel):
         b: batch size;
         L: maxlen of seq;
         bt: behavior types num
+        
         :param u: (b,)
         :param input_seqs: (b, L)
         :param bs_seqs: (b, L, bt)
