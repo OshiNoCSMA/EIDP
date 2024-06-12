@@ -321,6 +321,6 @@ class EIDP(BasicModel):
         X_emp = self._emp_forward(u, input_seqs, bs_seqs) # (b, L, d)
         X_imp = self._imp_forward(u, input_seqs, bs_seqs, target_bs) # (b, L, d)
 
-        x = (X_emp + X_imp) / 2 # (b, L, d)
-        return x
+        X = (X_emp + X_imp) / 2 # (b, L, d)
+        return X
 
