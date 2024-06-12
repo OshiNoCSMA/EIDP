@@ -328,7 +328,6 @@ class EarlyStopping:
             if self.counter >= self.patience:
                 self.early_stop = True
 
-
     def save_checkpoint(self, scores, model):
         '''
         Saves model when both NDCG and HR increase
