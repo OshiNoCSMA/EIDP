@@ -1,5 +1,5 @@
 # EIDP
-This is our official implementation for the paper **Explicit and Implicit Modeling via Dual-Path Transformer for Behavior Set-informed Sequential Recommendation**, accepted by **KDD'24**
+This is our official implementation for the paper **Explicit and Implicit Modeling via Dual-Path Transformer for Behavior Set-informed Sequential Recommendation**, accepted by **KDD '24**
 * * *
 
 ## Behavior Set-informed Sequential Recommendation (BSSR) Illustration
