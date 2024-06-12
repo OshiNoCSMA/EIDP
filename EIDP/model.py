@@ -138,8 +138,8 @@ class EIDP(BasicModel):
         if not os.path.exists(self.save_path):
             os.makedirs(self.save_path)
         fname = f"{self.model_name}_model.dataset={config['dataset']}." \
-                f"ll={config['lmsals']}.lh={config['lmsal_heads']}.cd={config['cba_dropout']}" \
-                f"dd={config['dcba_dropout']}.d={config['dropout']}.alpha={config['alpha']}" \
+                f"ll={config['lmsals']}.lh={config['lmsal_heads']}.cd={config['cba_dropout']}." \
+                f"dd={config['dcba_dropout']}.d={config['dropout']}.alpha={config['alpha']}." \
                 f"seed={config['seed']}.no={self.no}.pth"
         self.save_path = os.path.join(self.save_path, fname)
         self.apply(self.init_weights)
@@ -240,7 +240,7 @@ class EIDP(BasicModel):
 
         # (b, L, bt)
         one_tensor = torch.ones_like(bs_seqs)
-        # 1 or α (bt)
+        # 1 or bt
         scaled_mask = torch.where(bs_seqs == 0, one_tensor, self.scaling_factor)
 
         # (b, L, bt)
