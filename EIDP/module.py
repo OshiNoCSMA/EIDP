@@ -309,9 +309,9 @@ class ProbSparseAttention(SelfAttention):
         mh_k = self.split_head(proj_keys)
         mh_v = self.split_head(proj_values)
 
-        # α * ln(L_k)
+        # α*ln(Lk)
         U_part = self.alpha * np.ceil(np.log(Lk)).astype('int').item()
-        # α * ln(L_q)
+        # α*ln(Lq)
         u = self.alpha * np.ceil(np.log(Lq)).astype('int').item()
 
         U_part = U_part if U_part < Lk else Lk
