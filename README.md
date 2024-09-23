@@ -22,6 +22,7 @@ CUDA 11.7
 
 ## Dataset
 We use the dataset provided in **Tenrec: A Large-scale Multipurpose Benchmark Dataset for Recommender Systems (NeurIPS'22)**, sourced from the Tencent platform. For more information about the original data, please refer to [here](https://github.com/yuangh-x/2022-NIPS-Tenrec).
+* * *
 
 ## Commands
 Our implementation code is tested on Tesla V100 PCIE GPU Platform with 32 GB memory and has some references from the source codes of [ICLRec](https://github.com/salesforce/ICLRec) and [RecBole](https://github.com/RUCAIBox/RecBole).
@@ -55,5 +56,17 @@ A fomulation of **CE** loss function:
 ```
 where $v^\ell_u$ denotes the ground truth item and the indicator function $\delta(v^\ell_u)=0$ when $v^\ell_u$ is a padding item and $\delta(v^\ell_u)=1$ otherwise. Note that $|\delta(v)|$ represents the total amount of ground truth items.-->
 * * *
+
+## Citation
+If our code is helpful to you, please feel free to use it. Any citation would be greatly appreciated.
+```
+@inproceedings{chen2024explicit,
+  title={Explicit and Implicit Modeling via Dual-Path Transformer for Behavior Set-informed Sequential Recommendation},
+  author={Chen, Ming and Pan, Weike and Ming, Zhong},
+  booktitle={Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  pages={329--340},
+  year={2024}
+}
+```
 
 If you have any issues or ideas, feel free to contact us ([2252271001@email.szu.edu.cn](mailto:2252271001@email.szu.edu.cn)).
