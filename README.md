@@ -50,7 +50,7 @@ python main.py --dataset=[...] --do_eval
 
 <!-- [Main experimental results without loss function constraints](EIDP_onCE.pdf) (i.e., [DuoRec](https://github.com/RuihongQiu/DuoRec), [MGNN-SPred](https://github.com/Autumn945/MGNN-SPred) and [MBHT](https://github.com/yuh-yang/MBHT-KDD22) are all trained using the **CE** loss function, consistent with the original source code. Accordingly, EIDP also needs to maintain this consistency.) From this, it can be seen that training with the **CE** loss function leads to improvements in general models.
 
-A fomulation of **CE** loss function:
+A formulation of **CE** loss function:
 ```math
 \mathcal{L}= -\frac{1}{|\delta(v)|}\sum_{u\in\mathcal{U}}\sum_{\ell=1}^{L}\delta(v^\ell_u)\frac{\exp(\hat{y}_{\ell+1, v^\ell_u})}{\sum_{j\in\mathcal{V}}\exp(\hat{y}_{\ell+1, j})}
 ```
@@ -68,5 +68,6 @@ If our code is helpful to you, please feel free to use it. Any citation would be
   year={2024}
 }
 ```
+* * *
 
 If you have any issues or ideas, feel free to contact us ([2252271001@email.szu.edu.cn](mailto:2252271001@email.szu.edu.cn)).
